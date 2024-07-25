@@ -15,7 +15,7 @@ export default function MovieInfo({ movie }) {
             </div>
             <div>
                 <h1>{title}</h1>
-                <p className={css.text}><b>Release date:</b> {release_date}</p>
+                <p className={css.text}><b>Release date:</b>{release_date}</p>
                 <p className={css.text}><b>Rating:</b> {vote_average}</p>
 
                 <h2>Overwiew</h2>
