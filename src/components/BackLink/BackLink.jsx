@@ -1,12 +1,8 @@
-import { Link } from "react-router-dom";
 import { HiArrowLeft } from 'react-icons/hi';
 import css from "./BackLink.module.css"
 
-export const BackLink = ({ to, children }) => {
+export const BackLink = () => {
     return (
-      <Link to={to} className={css.link}>
-        <HiArrowLeft size="24" />
-        {children}
-      </Link>
-    );
+      <button className={css.btn}>{<HiArrowLeft size="24" />}Go back</button>
+    )
   };

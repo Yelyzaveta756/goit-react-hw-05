@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom"
 import MovieCard from "../MovieCard/MovieCard"
-import css from "./MoviesList.module.css"
+import css from "./MovieList.module.css"
 
 export default function MoviesList({ movies }){
 

@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense} from "react"
+import { useState, useEffect, useRef, Suspense} from "react"
 import { useParams, useLocation, Outlet, Link } from "react-router-dom"
 import { fetchMovieById } from "../../tmdb"
 import { BackLink } from "../../components/BackLink/BackLink"
@@ -11,7 +11,7 @@ export default function MovieDetailsPage (){
 
     const {movieId} = useParams()
     const location = useLocation();
-    const backLinkHref = location.state ?? '/movies';
+    const backLinkHref = useRef(location.state ?? '/movies');
 
     const [movie, setMovie] = useState(null)
     const [loading, setLoading] = useState(false)
@@ -33,13 +33,15 @@ export default function MovieDetailsPage (){
             }
         }
         getMovies()
-    }, []);
+    }, [movieId]);
 
 
     return (
         <section className={css.section}>
-        <BackLink to={backLinkHref}>Go back</BackLink>
-
+        <Link to={backLinkHref.current}>
+        <BackLink />
+        </Link>
+        
         {loading && <Loader/>} 
         {error && <Error/>}
         {movie &&

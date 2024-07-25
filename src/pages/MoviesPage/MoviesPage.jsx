@@ -4,7 +4,7 @@ import { useSearchParams, useLocation } from "react-router-dom";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import Loader from "../../components/Loader";
 import Error from "../../components/Error";
-import MoviesList from "../../components/MoviesList/MoviesList";
+import MovieList from "../../components/MovieList/MovieList";
 import css from "./MoviesPage.module.css"
 
 
@@ -47,7 +47,7 @@ export default function MoviesPage(){
         <SearchForm onSubmit={handleSearch}/>
         {error && <Error />}
         {loading && <Loader/>}
-        {searchMovies.length > 0 && <MoviesList movies={searchMovies} location={location}/>}
+        {searchMovies.length > 0 && <MovieList movies={searchMovies} location={location}/>}
         </section>
     )
 }

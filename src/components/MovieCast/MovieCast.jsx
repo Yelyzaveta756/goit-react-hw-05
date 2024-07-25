@@ -26,7 +26,7 @@ export default function MovieCast(){
             }
         }
         getMovies()
-    }, []);
+    }, [movieId]);
 
 return (
     <div>

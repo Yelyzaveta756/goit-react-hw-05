@@ -2,7 +2,7 @@ import { fetchTrendingMovies } from "../../tmdb"
 import { useEffect,useState } from "react"
 import Loader from "../../components/Loader"
 import Error from '../../components/Error'
-import MoviesList from "../../components/MoviesList/MoviesList"
+import MovieList from "../../components/MovieList/MovieList"
 import css from "./HomePage.module.css"
 
 export default function HomePage(){
@@ -34,7 +34,7 @@ export default function HomePage(){
         {trendingMovies.length > 0 && 
         <div>
             <h1 className={css.trendingTopic}>Trending today</h1>
-            <MoviesList movies={trendingMovies}/>
+            <MovieList movies={trendingMovies}/>
         </div>
         }
        </section>
