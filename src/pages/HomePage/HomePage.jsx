@@ -30,7 +30,7 @@ export default function HomePage(){
     return (
        <section className={css.section}>
         {error && <Error />}
-        {loading && <Loader/>}
+        {loading && <Loader />}
         {trendingMovies.length > 0 && 
         <div>
             <h1 className={css.trendingTopic}>Trending today</h1>

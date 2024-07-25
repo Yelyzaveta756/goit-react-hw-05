@@ -1,0 +1,29 @@
+.infoConainer {
+    display: flex;
+    gap: 20px;
+}
+
+.image{
+    background-size: cover;
+    width: 264px;
+    height: 394px;
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.text {
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    gap: 15px;
+}

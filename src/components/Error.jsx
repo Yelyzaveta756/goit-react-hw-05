@@ -1,5 +1,5 @@
+import toast from "react-hot-toast"
+
 export default function Error(){
-    return (
-        <div></div>
-    )
+    return toast.error("Oops, something went wrong. Please try again later.")
 }

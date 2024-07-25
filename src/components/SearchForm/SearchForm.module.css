@@ -8,6 +8,11 @@ letter-spacing: 0.1em;
 text-align: center;
 }
 
+.searchBtn:hover {
+background-color: rgb(11, 112, 255);
+
+}
+
 .searchInput {
     padding: 8px;
     border-radius: 5px;

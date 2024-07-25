@@ -1,0 +1,15 @@
+.section {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+
+.addContainer {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+}
+
+.link:hover {
+    color: blue;
+}

@@ -1,4 +1,7 @@
 .section {
-    background-image: linear-gradient(to right, blue, pink);
     padding: 20px;
+}
+
+#root {
+    margin: none
 }

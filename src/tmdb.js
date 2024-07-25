@@ -7,6 +7,7 @@ export const fetchTrendingMovies = async () => {
 
     const options = {
         headers: {
+          accept: 'application/json',
           Authorization: `Bearer ${API_TOKEN}`,
         }
       };
@@ -23,6 +24,7 @@ export const fetchMovieByQuery = async (query) => {
       query,
     },
     headers: {
+      accept: 'application/json',
       Authorization: `Bearer ${API_TOKEN}`,
     }
   };
@@ -33,15 +35,16 @@ export const fetchMovieByQuery = async (query) => {
 
 }
 
-export const fetchMovieById = async () => {
+export const fetchMovieById = async (movieId) => {
 
   const options = {
     headers: {
+      accept: 'application/json',
       Authorization: `Bearer ${API_TOKEN}`,
     }
   };
 
-  const response = await axios.get("movie/${id}?language=en-US", options)
+  const response = await axios.get(`movie/${movieId}`, options)
 
   return response.data;
 
