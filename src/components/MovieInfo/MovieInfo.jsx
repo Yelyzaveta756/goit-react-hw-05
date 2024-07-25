@@ -6,7 +6,7 @@ export default function MovieInfo({ movie }) {
         return <div>Movie data is not available</div>;
     }
 
-    const { title, tagline, genres, overview, vote_average, poster_path } = movie;
+    const { title, release_date, tagline, genres, overview, vote_average, poster_path } = movie;
 
     return (
         <div className={css.infoConainer}>
@@ -15,7 +15,7 @@ export default function MovieInfo({ movie }) {
             </div>
             <div>
                 <h1>{title}</h1>
-                <p className={css.tagline}>{tagline}</p>
+                <p className={css.text}><b>Release date:</b> {release_date}</p>
                 <p className={css.text}><b>Rating:</b> {vote_average}</p>
 
                 <h2>Overwiew</h2>
