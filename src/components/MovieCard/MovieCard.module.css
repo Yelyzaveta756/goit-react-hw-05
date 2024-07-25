@@ -1,0 +1,14 @@
+.trendingLink:hover {
+    color: orangered
+}
+
+.trendTitle {
+    width: 100%;
+    word-wrap: break-word; 
+    margin-top: 5px;
+}
+
+.trendingImageContainer {
+    display: inline-block;
+    width: auto;
+}

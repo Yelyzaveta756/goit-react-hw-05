@@ -1,0 +1,21 @@
+.navigation {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.navigationList {
+    display: flex;
+    padding: 30px 10px 0 10px;
+    gap: 20px;
+    border:none
+}
+
+.link {
+    color: black;
+    padding: 5px 5px 0 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.active {
+    background: linear-gradient(to bottom right, red, yellow);
+}

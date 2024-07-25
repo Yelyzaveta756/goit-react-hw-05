@@ -11,7 +11,38 @@ export const fetchTrendingMovies = async () => {
         }
       };
 
-      const response = await axios.get("trending/movie/day", options)
+      const response = await axios.get("trending/movie/day?language=en-US", options)
       
       return response.data;
+}
+
+export const fetchMovieByQuery = async (query) => {
+
+  const options = {
+    params: {
+      query,
+    },
+    headers: {
+      Authorization: `Bearer ${API_TOKEN}`,
+    }
+  };
+
+  const response = await axios.get("search/movie?language=en-US", options)
+
+  return response.data;
+
+}
+
+export const fetchMovieById = async () => {
+
+  const options = {
+    headers: {
+      Authorization: `Bearer ${API_TOKEN}`,
+    }
+  };
+
+  const response = await axios.get("movie/${id}?language=en-US", options)
+
+  return response.data;
+
 }

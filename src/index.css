@@ -25,7 +25,6 @@ ol, ul {
 }
 
 body {
-  margin: 20px;
   display: flex;
   justify-content: flex-start;
   font-family: "Bebas Neue", sans-serif;

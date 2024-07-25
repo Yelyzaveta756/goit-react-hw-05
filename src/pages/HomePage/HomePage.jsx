@@ -1,7 +1,9 @@
 import { fetchTrendingMovies } from "../../tmdb"
 import { useEffect,useState } from "react"
 import Loader from "../../components/Loader"
+import Error from '../../components/Error'
 import MoviesList from "../../components/MoviesList/MoviesList"
+import css from "./HomePage.module.css"
 
 export default function HomePage(){
 
@@ -18,6 +20,7 @@ export default function HomePage(){
                 setTrendingMovies(data.results)
             } catch (error) {
                 setError(true)
+                setTrendingMovies([])
             } finally {
                 setLoading(false)
             }
@@ -25,11 +28,15 @@ export default function HomePage(){
         getMovies()
     }, []);
     return (
-       <section>
-        <h1>Trending today</h1>
-        {error}
+       <section className={css.section}>
+        {error && <Error />}
         {loading && <Loader/>}
-        {trendingMovies.length > 0 && <MoviesList movies={trendingMovies}/>}
+        {trendingMovies.length > 0 && 
+        <div>
+            <h1 className={css.trendingTopic}>Trending today</h1>
+            <MoviesList movies={trendingMovies}/>
+        </div>
+        }
        </section>
     )
 }

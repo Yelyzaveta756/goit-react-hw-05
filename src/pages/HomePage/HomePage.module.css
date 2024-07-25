@@ -1,0 +1,10 @@
+.section{
+    padding: 20px;
+    background-image: linear-gradient(to right, blue, pink);
+}
+
+.trendingTopic {
+    width: 100%;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    text-align: center;
+}
