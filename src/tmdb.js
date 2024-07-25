@@ -44,7 +44,37 @@ export const fetchMovieById = async (movieId) => {
     }
   };
 
-  const response = await axios.get(`movie/${movieId}`, options)
+  const response = await axios.get(`movie/${movieId}?language=en-US`, options)
+
+  return response.data;
+
+}
+
+export const fetchMovieCredits = async (movieId) => {
+
+  const options = {
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${API_TOKEN}`,
+    }
+  };
+
+  const response = await axios.get(`movie/${movieId}/credits?language=en-US`, options)
+
+  return response.data;
+
+}
+
+export const fetchMovieReviews = async (movieId) => {
+
+  const options = {
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${API_TOKEN}`,
+    }
+  };
+
+  const response = await axios.get(`movie/${movieId}/reviews?language=en-US`, options)
 
   return response.data;
 
